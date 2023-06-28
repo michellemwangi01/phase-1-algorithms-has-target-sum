@@ -1,6 +1,54 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  let compoundSum;
+  for(let i=0; i<array.length; i++) {
+    console.log(`Num: ${array[i]}`);
+    for(let j=0;j<array.length; j++){
+      console.log(`Num of array: ${array[j]}`);
+      compoundSum = (array[i] + array[j])
+     console.log(`compoundSum: ${compoundSum}`);
+     if (compoundSum === target && i !== j) {
+      return true
+      
+     }else if(compoundSum !== target){    
+        continue
+     }
+    }
+  }
+  return false
 }
+
+let myArray = [3, 8, 12, 4, 11, 7]
+hasTargetSum(myArray,10)
+
+
+
+
+// function hasTargetSum(array, target) {
+//   let compoundSum;
+//   for(num of array) {
+//     console.log(`Num: ${num}`);
+//     for(let i=0;i<array.length; i++){
+//       console.log(`Num of array: ${array[i]}`);
+//       compoundSum = (num + array[i])
+//      console.log(`compoundSum: ${compoundSum}`);
+//      if (compoundSum === target && num !== array[i]) {
+//       return true
+      
+//      }else if(compoundSum !== target){    
+//         continue
+//      }
+//      else{
+//       return false
+//      }
+     
+//     }
+//   }
+// }
+
+// let myArray = [4]
+// hasTargetSum(myArray,4)
+
+
 
 /* 
   Write the Big O time complexity of your function here
